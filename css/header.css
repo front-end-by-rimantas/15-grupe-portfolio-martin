@@ -12,31 +12,33 @@ body {
         width: 100%;
     }
         .navigation-bar {
-            width: auto;
             display: block;
             border-bottom: 1px solid rgba(128, 128, 128, 0.438);
             width: 100%;
             position: fixed;
+            background-color: none;
         }
             nav > ul > li, a {
                 font-family: Arial, Helvetica, sans-serif;
-                font-weight: 500;
+                font-weight: 600;
                 font-size: 16px;
                 color: white;
                 text-decoration: none;
                 display: inline;
-                padding-right: 15px;
+                padding-left: 12px;
+                line-height: 32px;
             }
-            .navigation-bar > div {
-                color: white;
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 25px;
-               
-                margin-right: 1000px;
+            .navigation-bar > div > div > a {
+                font-size: 23px;
+                font-weight: 600;
+                line-height: 32px;
+                color: #ffffff;
+                display: inline-block;
+                text-transform: uppercase;
                 
             }
             .navigation-bar > nav {
-          
+                width: 100%;
             }
             .navigation-bar.container {
                padding: 15px
@@ -45,14 +47,14 @@ body {
     .hero{
         margin-top: 150px;
     }        
-    h1 {
+    .hero > div > h1 {
         color: white;
-        font-size: 55px;
+        font-size: 60px;
         font-weight: 300;
     }
-    h2 {
+    .hero > div > h2 {
         color :white;
-        font-size: 90px;
+        font-size: 100px;
         letter-spacing: 2px;
         max-width: 100%;
     }
@@ -63,13 +65,24 @@ body {
         font-weight: 300;
         letter-spacing: 1px;
     }
-        .letsTalkBTN {
-            
-            padding: 20px;
-            background-color: tomato;
+        .letsTalkBTN {   
+            color: #ffffff;
+            border-color: #f34236;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            background-color: #f34236;
+            padding: 15px 34px;
+            border-radius: 2px;
+        }
+        .letsTalkBTN:hover {   
+            color: #ffffff;
+            border-color: #111111;
+            box-shadow: 0px 8px 15px rgba(221, 50, 50, 0.397);
+            background-color: #111111;
+            padding: 15px 34px;
+            border-radius: 2px;
         }
         .talk {
-            margin-top: 10px;
+            margin-top: 30px;
         }
         .col-12.row.talk {
             margin-top: 30px;
