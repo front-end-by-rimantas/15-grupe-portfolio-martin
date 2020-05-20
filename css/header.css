@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+    header {
+        background-image: url(../img/home.jpg);
+        background-position: center;
+        height: 100vh;
+        width: 100%;
+    }
+        .navigation-bar {
+            width: auto;
+            display: block;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.438);
+            width: 100%;
+            position: fixed;
+        }
+            nav > ul > li, a {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 500;
+                font-size: 16px;
+                color: white;
+                text-decoration: none;
+                display: inline;
+                padding-right: 15px;
+            }
+            .navigation-bar > div {
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 25px;
+               
+                margin-right: 1000px;
+                
+            }
+            .navigation-bar > nav {
+          
+            }
+            .navigation-bar.container {
+               padding: 15px
+            }
+
+    .hero{
+        margin-top: 150px;
+    }        
+    h1 {
+        color: white;
+        font-size: 55px;
+        font-weight: 300;
+    }
+    h2 {
+        color :white;
+        font-size: 90px;
+        letter-spacing: 2px;
+        max-width: 100%;
+    }
+    .hero > div > p {
+        color: white;
+        margin: 0;
+        font-size: 15px;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+        .letsTalkBTN {
+            
+            padding: 20px;
+            background-color: tomato;
+        }
+        .talk {
+            margin-top: 10px;
+        }
+        .col-12.row.talk {
+            margin-top: 30px;
+        }
