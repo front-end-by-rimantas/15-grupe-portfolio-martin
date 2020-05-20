@@ -25,8 +25,8 @@ body {
 }
     .container > .row {
         display: inline-block;
-        width: 1400px;
-        margin: 5px calc(50% - 700px);
+        width: 1140px;
+        margin: 5px calc(50% - 570px);
     }
         .container > .row > .col-12,
         .container > .row > .col-11,
@@ -60,7 +60,7 @@ body {
         .container > .row > .col-2 { width: var(--w-2); }
         .container > .row > .col-1 { width: var(--w-1); }
 
-@media (max-width: 1500px) {
+/* @media (max-width: 1500px) {
     .container > .row {
         width: 1140px;
         margin: 5px calc(50% - 570px);
@@ -77,7 +77,7 @@ body {
     .container > .row > .col-xl-3 { width: var(--w-3); }
     .container > .row > .col-xl-2 { width: var(--w-2); }
     .container > .row > .col-xl-1 { width: var(--w-1); }
-}
+} */
 @media (max-width: 1200px) {
     :root {
         --gap: 30px;
