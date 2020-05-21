@@ -1,0 +1,94 @@
+.blog {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+.myBlogs > div > div > h1 {
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 5px;
+
+}
+
+.myBlogs > div > div > h1 >span{
+    color: #f34236;
+}
+    .blogLine {
+        width: 50px;
+        border-bottom: 3px solid black;
+        display: inline-block;
+        margin-bottom: 40px;
+    }
+
+.blogsImg {
+    margin: auto;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.blogsImg > a > img {
+    width: 100%;
+    transition:  1s;
+}
+    .blogsImg > a > img:hover {
+        transform: scale(1.1);
+    }
+.b-meta{
+    text-align: left;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+    .b-meta > span {   
+        color: rgb(130, 130, 130);
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24px;
+        
+    }
+    .blogTitle{
+        text-align: left;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .blogTitle > a {
+       color: black;
+       font-size: 25px;
+       cursor: pointer;
+       display: inline-block;
+       margin-top: 10px;
+
+    }
+    .blogTitle > a:hover {
+        color: #f34236;
+    }
+    .blogsInfo > p {
+        color: rgb(130, 130, 130);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        display: inline-block;
+        text-align: left;
+        margin-top: 15px;
+        margin-left: 25px;
+    }
+    .readMore{
+        float: left;
+        margin-bottom: 20px;
+    }
+    .readMore > a {
+        color: #f34236;
+        font-size: 14px;
+        font-weight: 600;
+        display: inline-block;
+        margin-top: 15px;
+        margin-left: 10px;
+        text-transform: uppercase;
+        border-bottom: red 2px solid;
+        cursor: pointer;
+    }
+    .readMore > a:hover {
+        color: #000000;
+        border-bottom: rgb(0, 0, 0) 2px solid;
+    }
