@@ -17,6 +17,10 @@ body {
             width: 100%;
             position: fixed;
             background-color: none;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        .navigation-bar.active {
+            background-color: white;
         }
             nav > ul > li, a {
                 font-family: Arial, Helvetica, sans-serif;
@@ -27,18 +31,30 @@ body {
                 display: inline;
                 line-height: 32px;
             }
-            .navigation-bar > div > div > a {
+            nav > ul > li, a.active {
+
+                color: black;
+
+            }
+            .martinText {
                 font-size: 23px;
                 font-weight: 600;
                 line-height: 32px;
                 color: #ffffff;
                 display: inline-block;
-                text-transform: uppercase;
-                
+                text-transform: uppercase;    
+            }
+            .martinText.active {
+                font-size: 23px;
+                font-weight: 600;
+                line-height: 32px;
+                color: #f34236;
+                display: inline-block;
+                text-transform: uppercase; 
                 
             }
             .navigation-bar > nav {
-                width: 100%;
+                width: 100%;               
             }
             .navigation-bar.container {
                padding: 15px
@@ -92,11 +108,8 @@ body {
             padding: 0px 10px;
             display: inline-block;     
         }
-        li {
 
-            
-        }
-        li> a::after {
+        .hoverEffect::after {
             content: '';
             display: block;
             width: 0;
@@ -104,7 +117,16 @@ body {
             background-color: white;
             transition: width .3s;
         }
-        li>a:hover::after {
+        .hoverEffect.active::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 3px;
+            background-color: #f34236;
+            transition: width .3s;
+        }
+        .hoverEffect:hover::after {
             width: 100%;
             transition: width .3s;
         }
+        
