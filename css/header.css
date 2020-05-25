@@ -5,6 +5,9 @@ body {
     margin: 0;
     padding: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
     header {
         background-image: url(../img/home.jpg);
         background-position: center;
@@ -17,6 +20,12 @@ body {
             width: 100%;
             position: fixed;
             background-color: none;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.5s;
+        }
+        .navigation-bar.active {
+            background-color: white;
+            transition: all 0.5s;
         }
             nav > ul > li, a {
                 font-family: Arial, Helvetica, sans-serif;
@@ -25,20 +34,32 @@ body {
                 color: white;
                 text-decoration: none;
                 display: inline;
-                padding-left: 12px;
                 line-height: 32px;
             }
-            .navigation-bar > div > div > a {
+            nav > ul > li, a.active {
+
+                color: black;
+
+            }
+            .martinText {
                 font-size: 23px;
                 font-weight: 600;
                 line-height: 32px;
                 color: #ffffff;
                 display: inline-block;
-                text-transform: uppercase;
+                text-transform: uppercase;    
+            }
+            .martinText.active {
+                font-size: 23px;
+                font-weight: 600;
+                line-height: 32px;
+                color: #f34236;
+                display: inline-block;
+                text-transform: uppercase; 
                 
             }
             .navigation-bar > nav {
-                width: 100%;
+                width: 100%;               
             }
             .navigation-bar.container {
                padding: 15px
@@ -87,3 +108,30 @@ body {
         .col-12.row.talk {
             margin-top: 30px;
         }
+
+        li > a {
+            padding: 0px 10px;
+            display: inline-block;     
+        }
+
+        .hoverEffect::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 3px;
+            background-color: white;
+            transition: width .3s;
+        }
+        .hoverEffect.active::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 3px;
+            background-color: #f34236;
+            transition: width .3s;
+        }
+        .hoverEffect:hover::after {
+            width: 100%;
+            transition: width .3s;
+        }
+        
