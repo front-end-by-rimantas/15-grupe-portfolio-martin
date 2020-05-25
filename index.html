@@ -25,13 +25,13 @@
 
 <body>
     <!-- Header -->
-    <header>
+    <header id="home">
         <div class="navigation-bar container ">
             <div class="row">
                 <div class="col-1 "><a href="#" class="martinText">Martin</a></div>
                 <nav class="col-6 m-l-5">
                     <ul>
-                        <li><a href="#" class="hoverEffect">Home</a></li>
+                        <li><a href="#home" class="hoverEffect">Home</a></li>
                         <li><a href="#" class="hoverEffect">About</a></li>
                         <li><a href="#" class="hoverEffect">Services</a></li>
                         <li><a href="#" class="hoverEffect">Portfolio</a></li>
@@ -76,39 +76,57 @@
     <div class="container bg-light">
         <div class="row">
             <div class="col-12">
-                <h1>MY SERVICES</h1>
+                <h1><span>My </span>services</h1>
             </div>
+            <div class="servicesLine"></div>
         </div>
-        <div class="row">
-            <div class="col-4">
-                <h3>Search Optimization</h3><br>
+        <div class="row"> 
+            <div class="col-4 servicesInfo" id="servisInfoCol">
+                
+                <div>
+                    <i><a href="#" class="fa fa-desktop"></a></i>
+                </div>
+                <h3>Search Optimization</h3>
                 <p>The9 is a graphically polished, interactive, easily customizable, highly modern, fast loading.</p>
             </div>
 
-            <div class="col-4">
-                <h3>Logo & Identityc</h3><br>
+            <div class="col-4 servicesInfo" id="servisInfoCol">
+                <div>
+                    <i><a href="#" class="fa fa-align-justify"></i></a>
+                </div>
+                <h3>Logo & Identityc</h3>
                 <p>The9 is a graphically polished, interactive, easily customizable, highly modern, fast loading.</p>
             </div>
 
-            <div class="col-4">
-                <h3>Graphics Design</h3><br>
+            <div class="col-4 servicesInfo" id="servisInfoCol">
+                <div>
+                    <i><a href="#" class="fa fa-rocket"></a></i>
+                </div>
+                <h3>Graphics Design</h3>
                 <p>The9 is a graphically polished, interactive, easily customizable, highly modern, fast loading.</p>
             </div>
-        </div>
-
-        <div class="row">
-            <div class="col-4">
-                <h3>Fully Responsive</h3><br>
+        
+            <div class="col-4 servicesInfo" id="servisInfoCol">
+                <div>
+                    <i><a href="#" class="fa fa-tablet"></a></i>
+                </div>
+                <h3>Fully Responsive</h3>
                 <p>The9 is a graphically polished, interactive, easily customizable, highly modern, fast loading.</p>
             </div>
 
-            <div class="col-4">
-                <h3>Advanced Options</h3><br>
+            <div class="col-4 servicesInfo" id="servisInfoCol">
+                <div>
+                    <i><a href="#" class="fa fa-wrench"></a></i>
+                </div>
+                <h3>Advanced Options</h3>
                 <p>The9 is a graphically polished, interactive, easily customizable, highly modern, fast loading.</p>
             </div>
 
-            <div class="col-4">
-                <h3>Reasonable Pricing</h3><br>
+            <div class="col-4 servicesInfo" id="servisInfoCol">
+                <div>
+                    <i><a href="#" class="fa fa-scissors"></a></i>
+                </div>
+                <h3>Reasonable Pricing</h3>
                 <p>is a graphically polished, interactive, easily customizable, highly modern, fast loading.</p>
             </div>
         </div>
@@ -154,10 +172,9 @@
                         interdum. Aenean
                         sodales dui quis leo fermentum scelerisque.</p>
                 </div>
-
             </div>
-
         </div>
+    </div>
         <!-- Freelance -->
         <div class="container freelance">
             <div class="row">
@@ -174,23 +191,10 @@
                 <h2 class="section-title col-12"><span>my</span> portfolio</h2>
                 <nav class="col-12">
                     <li class="active">all</li>
-                    <li>branding</li>
-                    <li>photoshop</li>
-                    <li>fashion</li>
-                    <li>product</li>
                 </nav>
             </div>
             <div class="row">
                 <div id="gallery" class="col-12">
-                    <div class="image"><img src="./img/portfolio/portfolio-1.jpg" alt="portfolio"></div>
-                    <div class="image"><img src="./img/portfolio/portfolio-2.jpg" alt="portfolio"></div>
-                    <div class="image"><img src="./img/portfolio/portfolio-3.jpg" alt="portfolio"></div>
-                    <div class="image"><img src="./img/portfolio/portfolio-4.jpg" alt="portfolio"></div>
-                    <div class="image"><img src="./img/portfolio/portfolio-5.jpg" alt="portfolio"></div>
-                    <div class="image"><img src="./img/portfolio/portfolio-6.jpg" alt="portfolio"></div>
-                    <div class="image"><img src="./img/portfolio/portfolio-7.jpg" alt="portfolio"></div>
-                    <div class="image"><img src="./img/portfolio/portfolio-8.jpg" alt="portfolio"></div>
-                    <div class="image"><img src="./img/portfolio/portfolio-9.jpg" alt="portfolio"></div>
                 </div>
             </div>
         </div>
@@ -343,7 +347,7 @@
                 </div>
             </div>
         </footer>
-        <script src="./js/data.js"></script>
+        <script src="./js/data.js" type="module"></script>
         <script src="./js/header.js"></script>
 </body>
 
