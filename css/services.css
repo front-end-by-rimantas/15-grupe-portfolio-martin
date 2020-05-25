@@ -23,18 +23,15 @@
     border: 5px solid white;
     box-shadow: 0px 5px 10px #3b3a3a33;
     cursor: pointer;
-}
-
-#servisInfoCol{
-    margin-top: 30px;
+    margin-top: 30px !important;
+    height: 300px;
+    transition: all .3s ease-in-out;
 }
 
 .servicesInfo:hover {
     background-color: #ffffff;
     border: 5px solid #f34236;
-    transition: all 1s;
-    position: relative;
-    bottom: 20px;
+    transform: translate3d(0px, -10px, 0px);
 }
 
 div > div > div > div> i > .fa{
@@ -54,7 +51,7 @@ div > div > div > div> i > .fa{
 }
 
 .servicesInfo > p {
-     color: rgb(130, 130, 130);
+     color: #828282;
         font-size: 15px;
         font-weight: 400;
         line-height: 24px;
