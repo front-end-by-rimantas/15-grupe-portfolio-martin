@@ -5,7 +5,7 @@ footer>div>h2{
     color: white; 
     font-size: 50px;   
 }
-.fa {
+footer>div>i>.fa {
     width: 40px;
     color:  #828282;
     font-size: 20px;
@@ -16,10 +16,10 @@ footer>div>h2{
     border-radius: 50%;
     padding-right: 15px;
 }
-.fa:hover { 
+footer>div>i>.fa:hover { 
     color: #fff;
     background-color: #212121;
-    border-top: 1px solid black;
+    border: 1px solid black;
 }
     .footerEnd{
         background-color: #212121;
