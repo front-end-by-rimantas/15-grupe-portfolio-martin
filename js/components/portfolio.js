@@ -118,7 +118,6 @@ function openModal(currentSlide) {
         cs = (cs + 1) % loadedPictures.length;
         updateSlide();
         updateCounter();
-        stopPropagation();
     }
     const prev = () => {
         if (cs > 0) {
@@ -129,7 +128,6 @@ function openModal(currentSlide) {
         }
         updateSlide();
         updateCounter();
-        stopPropagation();
     }
     const close = () => {
         modal.style.display = "none";
