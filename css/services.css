@@ -16,16 +16,17 @@
 }
 
 .servicesInfo {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    display: inline-block;
     background: #ffffff;
-    font-weight: 400px;
-    border-radius: 5px;
-    padding: 20px;
     border: 5px solid white;
+    border-radius: 3px;
     box-shadow: 0px 5px 10px #3b3a3a33;
     cursor: pointer;
-    margin-top: 30px !important;
-    height: 300px;
     transition: all .3s ease-in-out;
+    margin-bottom: 40px;
 }
 
 .servicesInfo:hover {
@@ -39,23 +40,25 @@ div > div > div > div> i > .fa{
     text-align: center;
     background-color: #ffffff;
     font-size: 50px;
-    margin: 20px 20px;
+    margin: 40px 20px;
     padding-left: 10px;
 }
 
 .servicesInfo > h3{
-       color: black;
-       font-size: 20px;
-       display: inline-block;
-       margin-top: 10px;
+    display: inline-block;
+    width: 100%;
+    font-size: 20px;
+    color: black;
+    margin-top: 10px;
 }
 
 .servicesInfo > p {
-     color: #828282;
-        font-size: 15px;
-        font-weight: 400;
-        line-height: 24px;
-        display: inline-block;
-        text-align: center;
-        margin-top: 15px;
+    display: inline-block;
+    font-size: 18px;
+    color: #828282;
+    line-height: 24px;
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 50px;
+    padding: 0;
 }
