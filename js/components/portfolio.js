@@ -5,19 +5,28 @@ class Picture {
         this.visible = false;
     }
     spawn(element, id){
-        const frame = document.createElement('div');
-        //create div container, add class and data-index attribute
-        frame.classList.add('image');
-        frame.setAttribute('data-index', id);
-        //upload image from folder
-        const img = document.createElement('img');
-        img.src = this.link;
-        //add image to div container
-        frame.appendChild(img);
-        //put container + image into gallery
-        element.appendChild(frame);
+        //create HTML outline
+        const HTML = `
+        <div class="image" data-index=${id}>
+            <img src="${this.link}">
+            <div class="info">
+                <a href="${this.link}">
+                    <i></i>
+                </a>
+                <h5>
+                    <a href="#">Our Photography</a>
+                </h5>
+            </div>
+        </div>`;
+        //add to the end of gallery
+        element.insertAdjacentHTML('beforeend', HTML);
         this.visible = true;
         this.inDOM = gallery.querySelector(`[data-index="${id}"]`);
+        const slide = this.inDOM.querySelector('.info > a');
+        slide.addEventListener('click', e => {
+            e.preventDefault();
+            openModal(id);
+        });
     }
     hide(){
         this.inDOM.style.display = "none";
@@ -31,6 +40,7 @@ class Picture {
 
 let loadedPictures = [];
 const navBar = document.querySelector('.portfolio > .row > nav');
+const modal = document.querySelector('#myModal');
 
 function createNav(tags) {
     tags.forEach(tag => {
@@ -87,6 +97,74 @@ function activateFilter() {
                     }
                 });
             }
+        }
+    });
+}
+
+function openModal(currentSlide) {
+    let cs = currentSlide;
+    const body = document.querySelector("body");
+    const left = modal.querySelector(".arrow-left");
+    const right = modal.querySelector(".arrow-right");
+    const slide = modal.querySelector(".modal-content > .slides > img");
+    const counter = modal.querySelector(".modal-content > .slides > .numbertext");
+    const bg = modal.querySelector(".modal-bg");
+    const closeBtn = modal.querySelector(".close");
+
+    //functions
+    const updateSlide = () => slide.src = loadedPictures[cs].link;
+    const updateCounter = () => counter.textContent = `${cs + 1} of ${loadedPictures.length}`;
+    const next = () => {
+        cs = (cs + 1) % loadedPictures.length;
+        updateSlide();
+        updateCounter();
+        stopPropagation();
+    }
+    const prev = () => {
+        if (cs > 0) {
+            cs -= 1;
+        }
+        else {
+            cs = loadedPictures.length - 1;
+        }
+        updateSlide();
+        updateCounter();
+        stopPropagation();
+    }
+    const close = () => {
+        modal.style.display = "none";
+        body.style.overflow = "visible";
+    }
+
+    //initial calls
+    updateSlide();
+    updateCounter();
+    modal.style.display = "block";
+    body.style.overflow = "hidden";
+    // left button action
+    left.addEventListener('click', prev);
+
+    //right button, click on slide action
+    right.addEventListener('click', next);
+    slide.addEventListener('click', next);
+
+    bg.addEventListener('click', close);
+    closeBtn.addEventListener('click', close);
+
+    //listen for keyboard button presses
+    document.addEventListener("keydown", e => {
+        if (e.isComposing || e.keyCode === 37) {
+          prev();
+        }
+    });
+    document.addEventListener("keydown", e => {
+        if (e.isComposing || e.keyCode === 39) {
+          next();
+        }
+    });
+    document.addEventListener("keydown", e => {
+        if (e.isComposing || e.keyCode === 27) {
+          close();
         }
     });
 }
