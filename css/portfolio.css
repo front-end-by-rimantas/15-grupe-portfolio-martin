@@ -312,3 +312,23 @@
         #myModal > .arrow-right {
             right: 0;
         }
+
+        @media (max-width: 768px) {
+            #gallery { 
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .portfolio > .row > nav > li {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            #gallery { 
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio > .row {
+                margin: 5px 0;
+            }
+        }
