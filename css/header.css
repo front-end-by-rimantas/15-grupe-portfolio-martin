@@ -28,7 +28,7 @@ html{
             background-color: white;
             transition: all 0.5s;
         }
-            nav > ul > li, a {
+            nav > ul > li,a {
                 font-family: Arial, Helvetica, sans-serif;
                 font-weight: 600;
                 font-size: 16px;
@@ -59,8 +59,10 @@ html{
                 text-transform: uppercase; 
                 
             }
-            .navigation-bar > nav {
-                width: 100%;               
+            nav {
+                width: 100%;  
+                display: inline-block;
+                             
             }
             .navigation-bar.container {
                padding: 15px
@@ -135,4 +137,56 @@ html{
             width: 100%;
             transition: width .3s;
         }
+        .toggleMenu{
+            font-size: 30px;
+            background-color: #f34236;
+            padding: 0px 10px;
+            display: none;
+            float: right;
+            cursor: pointer;
+        }
+        #toggle{
+            display: none;
+            
+        }
         
+        
+@media (max-width: 1200px) {
+    .toggleMenu{
+        display: inline-block;
+    }
+    .navButton {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+        line-height: 50px;
+        display: block;
+    }
+    nav > ul {
+        float: left;
+        display: none;
+    }
+    .navigation-bar {
+        background-color: none;
+    }
+    .martinText.active {
+        color: #f34236;
+    }
+    .martinText{
+        color: white;
+    }
+    .hoverEffect::after{
+        background-color: #f34236;
+    }
+
+    #toggle:checked + ul {
+        display: block;
+    }
+    #toggle:checked  {
+        background-color: white;  
+    } 
+}
+
+
