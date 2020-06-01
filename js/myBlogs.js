@@ -6,11 +6,11 @@ let topic = ["Design","Art","Sports"]
 let title = ["Make your Marketing website", "Paint the most beautiful Painting", "Be as fast as fastest Man on Earth"];
 let text = '';  
 
-//if("jei nevienodas masyvu ilgis, ka darom tada")
+
 if( image == title ){
     document.write(HTML);
 }
-// if("jei masyvas ilgesnis nei 6 elementai")
+
 
 for (let i=0; i<3; i++) {
     HTML += `<div class="col-4 blog">
