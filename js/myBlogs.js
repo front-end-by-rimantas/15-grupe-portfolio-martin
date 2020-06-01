@@ -1,19 +1,19 @@
 
-let HTML = '';
+let HTMLBlog = '';
 let image = [`src="./img/blog/blog-1.jpg"`,`src="./img/blog/blog-2.jpg"`,`src="./img/blog/blog-3.jpg"`]
 let date = ["02 Mar 2020", "03 Jan 2020", "01 01 2020"];
 let topic = ["Design","Art","Sports"]
 let title = ["Make your Marketing website", "Paint the most beautiful Painting", "Be as fast as fastest Man on Earth"];
-let text = '';  
+let texts = '';  
 
 
 if( image == title ){
-    document.write(HTML);
+    document.write(HTMLBlog);
 }
 
 
 for (let i=0; i<3; i++) {
-    HTML += `<div class="col-4 blog">
+    HTMLBlog += `<div class="col-4 blog">
     <div class="blogsImg">
     <a href="#">
         <img ${image[i]} title="" alt="blog">
@@ -28,4 +28,4 @@ for (let i=0; i<3; i++) {
 </div>`;
 }
 
-document.getElementById('blogs').innerHTML= HTML;
+document.getElementById('blogs').innerHTML= HTMLBlog;
