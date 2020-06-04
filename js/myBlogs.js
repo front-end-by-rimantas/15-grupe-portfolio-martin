@@ -13,7 +13,7 @@ if( image == title ){
 
 
 for (let i=0; i<3; i++) {
-    HTMLBlog += `<div class="col-4 blog">
+    HTMLBlog += `<div class="col-4 col-lg-6 col-sm-12 blog">
     <div class="blogsImg">
     <a href="#">
         <img ${image[i]} title="" alt="blog">
